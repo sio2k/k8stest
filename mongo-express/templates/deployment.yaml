@@ -18,18 +18,20 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
     {{- end }}
-      serviceAccountName: {{ include "mongo-express.serviceAccountName" . }}
-      securityContext:
-        {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ .Chart.Name }}
-          securityContext:
-            {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+          - name: ME_CONFIG_MONGODB_SERVER
+            value: "{{ .Values.server }}.{{ .Release.Namespace }}.svc.cluster.local"
+          - name: ME_CONFIG_MONGODB_ADMINPASSWORD
+            value: "{{ .Values.adminPassword }}"
+          - name: ME_CONFIG_MONGODB_ADMINUSERNAME
+            value: "{{ .Values.adminUsername }}"
           ports:
             - name: http
-              containerPort: 80
+              containerPort: {{ .Values.service.port }}
               protocol: TCP
           livenessProbe:
             httpGet:
