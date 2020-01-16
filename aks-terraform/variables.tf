@@ -56,5 +56,5 @@ variable "client_secret" {
 }
 
 variable "ssh_public_key" {
-  default = "test.pub"
+  default = "aks-terraform/test.pub"
 }
