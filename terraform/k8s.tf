@@ -8,12 +8,12 @@ provider "kubernetes" {
 
 resource "kubernetes_namespace" "k8s-ext-ingress" {
   metadata {
-    name = "ing-ext1"
+    name = "ing-ext"
   }
 }
 
 resource "kubernetes_namespace" "k8s-test-env" {
   metadata {
-    name = "test1"
+    name = "test"
   }
 }
