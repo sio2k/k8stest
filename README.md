@@ -10,7 +10,7 @@ We believe in `infrastructure as code` and automation of deployments.  We would 
 * Kubernetes is used to automat deployment, scaling, and management of containerized applications
 * Helm Charts are used to define, manage, install, and upgrade Kubernetes applications
 * To compose an application and database layer in a correct fashion,MongoDb is used as a database it is exposed to other pods on the k8s via service. Community helm chart is used to provision the database. 
-* Mongo-express is a custom helm chart to deploy a Web-based MongoDB admin interface. Mongo-express is exposed to the world via ngnix ingress. DNS is not configured so you can modify host files to test locally
+* Mongo-express is a custom helm chart to deploy a Web-based MongoDB admin interface. Mongo-express is exposed via ngnix ingress. DNS is not configured so you can modify host files to test locally
 
 ### To execute
 * prerequisite to be installed
