@@ -38,6 +38,10 @@ To perform exactly these actions, run the following command to apply:
     terraform apply "test-aks"
 
 * If you are happy with target infrastructure execute terraform apply "test-aks"
-* After cluster is provisioned exexcute ./schedule-test-app.sh
+* After cluster is provisioned execute ./schedule-test-app.sh to deploy and compose application. you shuld see log 
+  * **104.45.75.59** mongo-express.test.0.49.0.com
+  * **104.45.75.59** is dynamic ip, it may chnage this is only for reference
+* Copy the log and modify hosts file - a good article https://support.rackspace.com/how-to/modify-your-hosts-file/
 
-Screenshots for the 
+
+
