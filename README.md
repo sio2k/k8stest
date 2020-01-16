@@ -43,5 +43,7 @@ To perform exactly these actions, run the following command to apply:
   * **104.45.75.59** is dynamic ip, it may chnage this is only for reference
 * Copy the log and modify hosts file - a good article https://support.rackspace.com/how-to/modify-your-hosts-file/
 
+### Web application
+![alt text](https://raw.githubusercontent.com/sio2k/k8stest/master/images/mongo-express.jpg)
 
 
